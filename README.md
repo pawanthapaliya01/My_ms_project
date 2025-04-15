@@ -1,1 +1,2 @@
 My  MS project studied the melting profile of the helicoidal DNA molecules. Using extended Peyrard-Bishop (PB) model we measured the thermal and mechnical melting profile of the Helicoidal DNA. Our model showed that shorter DNA melting profile can be studied by mechanical means where as longer DNA are sensitive to change in temperature. Fortran, Mathematica and python were used for programming and adata analysis.
+![image](https://github.com/user-attachments/assets/0c4fe8d1-5c27-4554-ba22-349c02dffa92)
