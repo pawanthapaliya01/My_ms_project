@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+import numpy as np
+
+import matplotlib                 # module for making pretty figures
+matplotlib.use('Agg')             # use 'Agg' backend - do not show plot, just save figure
+
+from matplotlib import rcParams   # class to modify figure properties
+#rcParams.update({'figure.autolayout': True}) # autolayout
+rcParams['legend.numpoints'] = 1  # set 1 marker in legend (instead of two)
+
+import matplotlib.pyplot as plt   # module for making pretty figures
+
+##################################################################################################
+
+# Figure of force-extension relation force(h) = inverse of h(force)
+
+# set figure properties
+fig = plt.figure(figsize=(3.2,3))   # makes a 3.3in x 3in figure
+ax = fig.add_subplot(111)
+
+# load data
+data = np.loadtxt('force_extension_py.dat')
+fe, = plt.plot(data[:,0], data[:,1], ms = 2.5, marker = 'o', color='Blue', mec='Blue', mfc='Blue',
+              mew=0.5, lw=0.5, label=r' $l$', clip_on=False, zorder=100)
+
+# plt.legend(handles=[fe], bbox_to_anchor=(0.32,0.90), loc=1, fontsize=10,
+#           handletextpad=0.4, borderpad=0.5, handlelength=1.5, labelspacing=0.5)
+
+plt.title('$\mathrm{L33B9}$ \n',fontsize=10)                 # text in mathmode using \mathrm{}
+                                                              # to produce Times New Roman font 
+plt.xlabel('$\mathrm{h}_{\,}(\AA)$',fontsize=10) 
+plt.xlim((3.0,6.4))
+
+plt.ylabel('$\mathrm{F}_{\,}(\mathrm{pN})$',fontsize=10)
+plt.ylim((0,40))
+
+ax.tick_params(which='major', length=6, labelsize=8, right=True, top=True, direction='in')
+plt.tight_layout()
+plt.savefig('L33B9_force_extension.eps', format='eps', dpi=300)      # save the figure
+
+plt.close()
