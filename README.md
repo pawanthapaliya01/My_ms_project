@@ -4,20 +4,20 @@ In my Master's project, I investigated the thermal and mechanical melting behavi
 
 Key highlights:
 
-    🧪 Thermal vs Mechanical Melting:
+    Thermal vs Mechanical Melting:
     The model revealed that:
 
         Shorter DNA molecules exhibit melting profiles predominantly influenced by mechanical forces.
 
         Longer DNA molecules are more sensitive to temperature changes, making thermal denaturation a more effective probe for their stability.
 
-    🔬 Modeling & Simulation:
+    Modeling & Simulation:
 
         Employed the extended PB model to simulate the helicoidal structure and denaturation pathways.
 
         Analyzed the energy landscape and melting transitions under varying thermal and mechanical conditions.
 
-    💻 Tools & Languages Used:
+    Tools & Languages Used:
 
         Fortran for numerical simulations.
 
